@@ -1,0 +1,53 @@
+//blur
+.blur-enter-active {
+  animation: blur-in .4s linear forwards;
+}
+.blur-leave-active {
+  animation: blur-in .4s linear reverse;
+}
+
+@keyframes blur-in {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);   
+  }
+}
+
+//slide
+@keyframes slide-in-x {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-y {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+//clip
+@keyframes clip {
+  0% {
+    clip: rect(20px,auto,auto,0);
+  }
+  85% {
+    clip: rect(20px,auto,auto,220px);
+  }
+  100% {
+    clip: rect(20px,auto,auto,200px);
+  }
+}

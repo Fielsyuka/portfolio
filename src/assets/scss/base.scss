@@ -1,0 +1,61 @@
+@import "@/assets/scss/_mixin.scss";
+
+/* Base settings
+---------------------------------------------------------------- */
+body {
+  width: 100%;
+  background: #fff;
+  color: $color-base;
+  font-size: rem(14);
+  font-weight: 300;
+  font-family: $base-font;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+/* 画像 */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* リンク */
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: filter .3s;
+  transition: opacity .5s;
+}
+
+a:hover {
+  color: $color-link;
+  // text-decoration: underline;
+  opacity: .3;
+  filter: blur(1px);
+  text-decoration: none;
+  transition: filter .3s;
+  transition: opacity .5s;
+}
+
+/* font */
+.font-xsmall {
+  font-size: rem(10);
+}
+.font-small {
+  font-size: rem(12);
+}
+.font-normal {
+  font-size: rem(14);
+}
+.font-medium {
+  font-size: rem(16);
+}
+.font-large {
+  font-size: rem(18);
+}
+.font-xlarge {
+  font-size: rem(20);
+}
+.font-subcolor {
+  color: $color-sub;
+}

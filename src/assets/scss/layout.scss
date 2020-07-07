@@ -1,0 +1,134 @@
+@import "@/assets/scss/_mixin.scss";
+
+// #app {
+//   width: 100%;
+//   height: 100vh;
+// }
+
+.l-wrap {
+  width: 100vw;
+  // max-width: 640px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+}
+
+.l-header {
+    position: fixed;
+    top: 70px;
+    left: $padding-sp;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: $color-theme;
+    font-size: rem(16);
+    letter-spacing: .08em;
+    z-index: 2000;
+
+  .site-title {
+    // font-size: rem(13);
+
+    &__sub {
+      margin-left: 1.5em;
+      // color: $color-theme;
+      font-size: rem(11);
+      letter-spacing: .08em;
+    }
+  }
+}
+
+.l-main {
+  // position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 110px;
+  background: url("../images/flower_bg.png") no-repeat center center/cover fixed, #fff;
+  z-index: 1000;
+
+  .l-main__inner {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #fff;
+    box-shadow: 0 1px 5px 2px rgba(#d6d6d6, .6);
+  }
+
+  .l-main__section {
+    position: relative;
+    padding: 60px 0;
+  }
+}
+
+.l-aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 86vw;
+  height: 100vh;
+  padding: 110px 30px 60px;
+  background: #eaf3ea;
+  transform: translateX(85vw);
+  transition: transform .2s;
+  z-index: 2000;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 16px;
+    height: 100vh;
+    background: url("../images/aside-bg.png") repeat-y center center/contain;
+  }
+}
+
+
+@include media-pc {
+  .l-wrap {
+    width: 56vw;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  .l-header {
+    position: fixed;
+    top: auto;
+    bottom: -40px;
+    left: 0;
+    width: 100vh;
+    height: 40px;
+    line-height: 40px;
+    color: $color-sub;
+    font-size: rem(14);
+    text-align: center;
+    letter-spacing: .08em;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    z-index: 2000;
+  }
+
+  .l-main {
+    width: 70vw;
+    padding-top: 0;
+
+    .l-main__section {
+      padding: 80px 0;
+    }
+  }
+
+  .l-aside {
+    display: flex;
+    align-items: flex-end;
+    width: 30vw;
+    padding: 110px 60px 60px;
+    transform: none;
+
+    &::before {
+      left: -28px;
+      width: 28px;
+    }
+  }
+}

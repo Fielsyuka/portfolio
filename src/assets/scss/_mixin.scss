@@ -1,0 +1,94 @@
+//ページ余白
+$padding-sp: 30px;
+$padding-pc: 60px;
+
+//カラー
+$color-base: #151e49;
+$color-sub: #908f8f;
+$color-point: #4a7c7c;
+$color-theme: #325d80;
+$color-line: #6f8f79;
+$color-link: #007ab2;
+
+//ベースのフォントサイズ
+$base-font-size: 16;
+
+//フォントサイズの自動計算
+@function rem($pixels, $context: $base-font-size) {
+  @return $pixels / $context * 1rem;
+}
+
+//フォント
+$base-font: 'Noto Sans JP', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, "平成ゴシック", "メイリオ", "Meiryo", Helvetica, Arial, Verdana, "ＭＳ Ｐゴシック", "MS UI Gothic", sans-serif;
+$accent-font: 'Nunito', sans-serif;
+$eng-font:  'Barlow Semi Condensed', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;900&&family=Nunito:wght@300;400&display=swap');
+
+// ブレークポイント
+//　PCファースト
+@mixin media-breakpoint-down-lg {
+  @media screen and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin media-breakpoint-down-md {
+  @media screen and (max-width: 991px) {
+    @content
+  }
+}
+
+@mixin media-breakpoint-down-sm {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+@mixin media-breakpoint-down-xs {
+  @media screen and (max-width: 576px) {
+    @content
+  }
+}
+
+//　モバイルファースト
+// 小デバイス（横向きモバイル, 576px 以上）
+@mixin media-breakpoint-up-sm {
+  @media screen and (min-width: 576px) {
+    @content
+  }
+}
+
+// 中デバイス（タブレット, 768px 以上）
+@mixin media-breakpoint-up-md {
+  @media screen and (min-width: 768px) {
+    @content
+  }
+}
+
+// 大デバイス（デスクトップ, 992px 以上）
+@mixin media-breakpoint-up-lg {
+  @media screen and (min-width: 992px) {
+    @content
+  }
+}
+
+// 特大デバイス（ワイド・デスクトップ, 1200px 以上）
+@mixin media-breakpoint-up-xl {
+  @media screen and (min-width: 1200px) {
+    @content
+  }
+}
+
+// 768px以下タブレット・スマホ、769px以上PC
+//　モバイルファースト
+@mixin media-pc {
+  @media screen and (min-width: 769px) {
+    @content
+  }
+}
+//　PCファースト
+@mixin media-sp {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}
