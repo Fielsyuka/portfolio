@@ -3,7 +3,7 @@
     <page-heading>自己紹介</page-heading>
     <page-card>
       <template v-slot:image>
-        <img src="../assets/images/yuka.jpg" alt="Yuka">
+        <!-- <img src="../assets/images/yuka.jpg" alt="Yuka"> -->
         <!-- <draw-picture file-name="yuka.jpg"></draw-picture> -->
       </template>
       <template v-slot:title>

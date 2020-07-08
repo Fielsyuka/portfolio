@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <toggle-menu @toggle-menu="toggleMenu"></toggle-menu>
     <header class="l-header">
-      <h1 class="site-title">My Portfolio<span class="site-title__sub">- Yuka.K -</span> </h1>
+      <h1 class="site-title">Portfolio<span class="site-title__sub">Yuka.K</span> </h1>
     </header>
     <main class="l-main">
       <div class="l-main__inner l-wrap">
@@ -11,7 +12,6 @@
       </div>
     </main>
     <aside class="l-aside">
-      <toggle-menu></toggle-menu>
       <global-nav></global-nav>
     </aside>
   </div>
@@ -28,12 +28,28 @@
   },
   data(){
     return {
+      menuActive: false
     }
   },
   mounted() {
   },
+  watch: {
+    menuActive() {
+      const target = document.querySelector('.l-aside');
+      if(this.menuActive === false) {
+        target.classList.remove('is-active');
+      } else {
+        target.classList.add('is-active');
+      }
+    }
+  },
   methods: {
-
+    toggleMenu() {
+      this.menuActive = !this.menuActive
+    },
+    closeMenu() {
+      this.menuActive = false
+    }
   },
 }
 </script>

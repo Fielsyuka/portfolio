@@ -7,7 +7,6 @@
         <li class="nav__list-item"><router-link to="/Works">実績</router-link></li>
       </ul> 
     </nav>
-       
   </div>
 </template>
 
@@ -18,6 +17,13 @@ export default {
 
   data () {
     return {
+    }
+  },
+  methods: {
+  },
+  watch: {
+    $route() {
+      this.closeMenu();
     }
   }
 }
@@ -44,7 +50,7 @@ export default {
   transition: filter .3s;
   transition: opacity .5s;
 }
-.nav__list-item > a:not(.router-link-exact-active):hover {
+.nav__list-item > a:hover {
   opacity: .3;
   filter: blur(1px);
   text-decoration: none;
@@ -53,16 +59,34 @@ export default {
 }
 .nav__list-item > a.router-link-exact-active {
   color: $color-line;
+  font-weight: 500;
 }
+// .nav__list-item > a.router-link-exact-active:hover {
+//   opacity: 1;
+//   filter: blur(0);
+// }
 .nav__list-item > a.router-link-exact-active::after{
   content: "";
   display: block;
   position: absolute;
   top: 1.7em;
-  right: -20vw;
-  width: 20vw;
+  left: -20px;
+  width: 20px;
   height: 1px;
   background-color: $color-line;
+  animation: clip-line .3s linear reverse;
 }
+// //clip
+// @keyframes clip-line {
+//   0% {
+//     clip: rect(auto,20vw,auto,auto);
+//   }
+//   85% {
+//     clip: rect(auto,10px,auto,auto);
+//   }
+//   100% {
+//     clip: rect(auto,auto,auto,auto);
+//   }
+// }
 
 </style>

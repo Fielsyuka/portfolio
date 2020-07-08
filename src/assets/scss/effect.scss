@@ -5,7 +5,9 @@
 .blur-leave-active {
   animation: blur-in .4s linear reverse;
 }
-
+.blur-in {
+  animation: blur-in .4s linear forwards;
+}
 @keyframes blur-in {
   0% {
     opacity: 0;
@@ -21,6 +23,9 @@
 }
 
 //slide
+.slide-in-left {
+  animation: slide-in-x .8s linear forwards;
+}
 @keyframes slide-in-x {
   0% {
     transform: translateX(-100%);
@@ -38,16 +43,3 @@
   }
 }
 
-
-//clip
-@keyframes clip {
-  0% {
-    clip: rect(20px,auto,auto,0);
-  }
-  85% {
-    clip: rect(20px,auto,auto,220px);
-  }
-  100% {
-    clip: rect(20px,auto,auto,200px);
-  }
-}
