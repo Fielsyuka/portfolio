@@ -43,7 +43,7 @@ export default {
     width: 26px;
     height: 1px;
     background-color: $color-base;
-    animation: rotate-bar-02 .3s linear reverse;
+    transition: all .3s;
   }
   &::after {
     content: "";
@@ -54,44 +54,22 @@ export default {
     width:  18px;
     height: 1px;
     background-color: $color-base;
-    animation: rotate-bar-01 .3s linear reverse;
+    transition: all .3s;
   }
   &.is-active {
     &::before {
-      animation: rotate-bar-01 .3s linear forwards;
+      width: 16px;
+      transform: rotate(-405deg) translate(-6px, 2px);
+      transition: all .3s;
     }
     &::after {
-      animation: rotate-bar-02 .3s linear forwards;
-    }  }
-}
-@keyframes rotate-bar-01 {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    width: 16px;
-    transform: rotate(-405deg) translate(-6px, 2px);
+      width: 16px;
+      transform: rotate(405deg) translate(-6px, -2px);
+      transition: all .3s;
+    }
   }
 }
-@keyframes rotate-bar-02 {
-  0% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    width: 16px;
-    transform: rotate(405deg) translate(-6px, -2px);
-  }
-}
+
 @include media-pc {
   .toggle-menu {
     display: none;
