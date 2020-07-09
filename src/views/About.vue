@@ -11,9 +11,10 @@
         <h3 class="font-large">ゆか <span class="font-small">[ Yuka ]</span></h3>
       </template>
       <template v-slot:texts>
-        <p>東京の片隅で3人の男の子を育てています。</p>
-        <p>在宅で働くフリーランスコーダーです。</p>
-        <p>フロントエンド専門です。</p>
+        <p>東京の片隅に暮らすフリーランスWEBコーダーです。</p>
+        <p>30歳未経験でWEB業界に入り、現在{{num}}年目になりました。<br>...が、その間に2回の出産を経ているので実務経験は{{actual}}年程度です。</p>
+        <p>レスポンシブコーディングとWordpressのテーマ制作が得意です。<br>最近はJavasctiptに魅了され、VueやReactを学んでいます。<br></p>
+        <p>近い将来、フロントエンドエンジニアになる予定です！（希望）</p>
       </template>
     </page-card>
     <pagination prev="/" next="/Works"></pagination>
@@ -32,6 +33,19 @@ export default {
     PageHeading,
     PageCard,
     Pagination,
+  },
+  data() {
+    return {
+      start: 2017,
+      num: '',
+      actual: ''
+    }
+  },
+  mounted() {
+    const date = new Date();
+    const year = date.getFullYear();
+    this.num = year - this.start;
+    this.actual = this.num - 1;
   },
   methods: {
     splitText(val) {

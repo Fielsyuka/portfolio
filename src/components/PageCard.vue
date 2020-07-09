@@ -61,9 +61,17 @@ export default {
 }
 .page-card__texts {
   position: relative;
-  margin-top: 20px;
+  margin-top: 14px;
   line-height: 2;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
+
+  p {
+    font-size: rem(14);
+  }
+
+  p + p {
+    margin-top: 1.3em;
+  }
 }
 .svg-rect {
   position: fixed;

@@ -32,7 +32,7 @@ export default {
 @import "../assets/scss/_mixin.scss";
 
 .pagination {
-  margin-top: 130px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -61,6 +61,12 @@ export default {
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@include media-pc {
+  .pagination {
+    margin-top: 100px;
   }
 }
 </style>

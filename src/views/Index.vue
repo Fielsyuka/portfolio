@@ -95,7 +95,6 @@ export default {
   position: relative;
   color: $color-theme;
   font-family: $accent-font;
-  // text-align: center;
 
   .top-catch__fixed {
     margin-left: $padding-pc;
@@ -111,7 +110,7 @@ export default {
   .top-catch__move {
     margin-left: $padding-pc;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(202, 214, 16, .5);
+    text-shadow: 3px 3px 2px rgba(165, 214, 16, 0.5);
     color: $color-theme;
     font-family: $accent-font;
     display: block;
