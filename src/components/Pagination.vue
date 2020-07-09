@@ -1,15 +1,15 @@
 <template>
   <div class="pagination">
     <router-link v-bind:to="prev" class="pagination__prev">
-      <p class="pagination__text" v-if="prev != 'none'">Prev</p>
-      <svg class="pagination__svg" width="50px" height="9px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="prev != 'none'">
-        <path d="M50 8 L0 8 L10 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
+      <svg class="pagination__svg" width="40px" height="9px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="prev != 'none'">
+        <path d="M40 7 L0 7 L10 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
+      <p class="pagination__text" v-if="prev != 'none'">Prev</p>
     </router-link>
     <router-link v-bind:to="next" class="pagination__next">
       <p class="pagination__text" v-if="next != 'none'">Next</p>
-      <svg class="pagination__svg" width="50px" height="9px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="next != 'none'">
-        <path d="M0 8 L50 8 L40 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
+      <svg class="pagination__svg" width="40px" height="9px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="next != 'none'">
+        <path d="M0 7 L40 7 L30 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
     </router-link>
   </div>
@@ -32,7 +32,7 @@ export default {
 @import "../assets/scss/_mixin.scss";
 
 .pagination {
-  margin-top: 100px;
+  margin-top: 130px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -41,7 +41,6 @@ export default {
   .pagination__next {
     display: flex;
     align-items: center;
-    margin: 0 20px;
     .pagination__text {
       margin: 0 10px;
     }

@@ -56,13 +56,12 @@ export default {
 }
 
 .page-card__picture__title {
-  margin-left: 30px;
   letter-spacing: .1em;
   line-height: 1.8;
 }
 .page-card__texts {
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
   line-height: 2;
   letter-spacing: .1em;
 }

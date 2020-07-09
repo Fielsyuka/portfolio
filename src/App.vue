@@ -2,7 +2,7 @@
   <div id="app">
     <toggle-menu @toggle-menu="toggleMenu"></toggle-menu>
     <header class="l-header">
-      <h1 class="site-title">Portfolio<span class="site-title__sub">Yuka.K</span> </h1>
+      <h1 class="site-title"><router-link to="/">Portfolio<span class="site-title__sub">Yuka.K</span></router-link></h1>
     </header>
     <main class="l-main">
       <div class="l-main__inner l-wrap">
@@ -12,8 +12,9 @@
       </div>
     </main>
     <aside class="l-aside">
-      <global-nav></global-nav>
+      <global-nav @close-menu="closeMenu"></global-nav>
     </aside>
+    <div v-show="menuActive" class="l-modal" @click="closeMenu"></div>
   </div>
 </template>
 <script>
@@ -35,11 +36,14 @@
   },
   watch: {
     menuActive() {
-      const target = document.querySelector('.l-aside');
+      const aside = document.querySelector('.l-aside');
+      const button = document.querySelector('.toggle-menu');
       if(this.menuActive === false) {
-        target.classList.remove('is-active');
+        aside.classList.remove('is-active');
+        button.classList.remove('is-active');
       } else {
-        target.classList.add('is-active');
+        aside.classList.add('is-active');
+        button.classList.add('is-active');
       }
     }
   },

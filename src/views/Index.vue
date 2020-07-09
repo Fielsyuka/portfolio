@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     splitText(val) {
-      return val.replace(/\S/g, '<span class="letter">$&</span>');
+      return val.replace(/\S/g, '<span class="js-move-letter">$&</span>');
     },
     updateCatch() {
       const length = this.catchArr.length;
@@ -54,7 +54,7 @@ export default {
       this.currentCatch = this.splitText(newCatch);
     },
     fadeInDown() {
-      const target = '.top-catch__move .letter';
+      const target = '.top-catch__move .js-move-letter';
       anime.timeline()
         .add({
           targets: target,
@@ -98,14 +98,13 @@ export default {
   // text-align: center;
 
   .top-catch__fixed {
-    display: block;
     margin-left: $padding-pc;
     color: $color-theme;
     font-family: $accent-font;
     font-size: rem(20);
     font-weight: 300;
     line-height: 2.5;
-    letter-spacing: .2em;
+    letter-spacing: .16em;
     transition: all .2s;
   }
 
@@ -116,14 +115,9 @@ export default {
     color: $color-theme;
     font-family: $accent-font;
     display: block;
-    font-size: rem(42);
+    font-size: rem(36);
     font-weight: 300;
-    letter-spacing: .2em;
-
-    .letter {
-      display: inline-block;
-      opacity: 0;
-    }
+    letter-spacing: .16em;
   }
 
   .top-catch__line {
@@ -147,14 +141,17 @@ export default {
   letter-spacing: .2em;
   line-height: 1.8;
 }
+@include media-pc {
+  .top-catch {
+    .top-catch__fixed {
+      margin-left: $padding-pc;
+      font-size: rem(20);
+    }
 
-
-.js-text-anim {
-  display: inline-block;
-
-  .letter {
-    display: inline-block;
-
+    .top-catch__move {
+      margin-left: $padding-pc;
+      font-size: rem(40);
+    }
   }
 }
 </style>

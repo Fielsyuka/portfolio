@@ -2,9 +2,9 @@
   <div class="global-nav">
     <nav>
       <ul class="nav__list">
-        <li class="nav__list-item"><router-link to="/">トップ</router-link></li>
-        <li class="nav__list-item"><router-link to="/About-me">自己紹介</router-link></li>
-        <li class="nav__list-item"><router-link to="/Works">実績</router-link></li>
+        <li class="nav__list-item"><router-link to="/">Top</router-link></li>
+        <li class="nav__list-item"><router-link to="/About-me">About me</router-link></li>
+        <li class="nav__list-item"><router-link to="/Works">Works</router-link></li>
       </ul> 
     </nav>
   </div>
@@ -23,7 +23,7 @@ export default {
   },
   watch: {
     $route() {
-      this.closeMenu();
+      this.$emit('close-menu');
     }
   }
 }
@@ -43,7 +43,7 @@ export default {
   position: relative;
   padding: 1em;
   color: $color-base;
-  font-family: $base-font;
+  font-family: $accent-font;
   font-size: rem(15);
   font-weight: 300;
   letter-spacing: .15em;
@@ -58,8 +58,8 @@ export default {
   transition: opacity .5s;
 }
 .nav__list-item > a.router-link-exact-active {
-  color: $color-line;
-  font-weight: 500;
+  color: $color-sub;
+  // font-weight: 500;
 }
 // .nav__list-item > a.router-link-exact-active:hover {
 //   opacity: 1;
@@ -70,8 +70,8 @@ export default {
   display: block;
   position: absolute;
   top: 1.7em;
-  left: -20px;
-  width: 20px;
+  right: -22vw;
+  width: 20vw;
   height: 1px;
   background-color: $color-line;
   animation: clip-line .3s linear reverse;

@@ -1,6 +1,6 @@
 <template>
-  <section class="l-main__section section-who">
-    <page-heading>自己紹介</page-heading>
+  <section class="l-main__section section-about">
+    <page-heading></page-heading>
     <page-card>
       <template v-slot:image>
         <!-- <img src="../assets/images/yuka.jpg" alt="Yuka"> -->
@@ -16,7 +16,7 @@
         <p>フロントエンド専門です。</p>
       </template>
     </page-card>
-    <pagination prev="none" next="/Works"></pagination>
+    <pagination prev="/" next="/Works"></pagination>
   </section>
 </template>
 <script>
@@ -27,20 +27,16 @@ import Pagination from '@/components/Pagination.vue'
 
 
 export default {
-  name: 'About',
+  name: 'About-me',
   components: {
-    // DrawPicture,
     PageHeading,
     PageCard,
     Pagination,
-
   },
-  data() {
-    return {}
-  },
-  mounted() {},
   methods: {
-
+    splitText(val) {
+      return val.replace(/\S/g, '<span class="letter">$&</span>');
+    }
   }
 }
 </script>
