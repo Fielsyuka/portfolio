@@ -4,10 +4,11 @@
       <main-nav></main-nav>
     </div>
     <div class="l-main__section l-wrap">
-      <div class="top-catch">
+      <top-catch></top-catch>
+<!--       <div class="top-catch">
         <div class="top-catch__flower">
-          <svg viewBox="0 0 144 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g stroke="#ccc" stroke-width="1" fill="none" fill-rule="evenodd">
+          <svg viewBox="-1 -1 146 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke="#b5b5b5" stroke-width="1" fill="none" fill-rule="evenodd">
               <path d="M72.0143885,69.4964029 C85.1079137,42.8831365 91.6546763,26.0688453 91.6546763,19.0535295 C91.6546763,8.53055572 82.8614199,0 72.0143885,0 C61.1673571,0 52.3741007,8.53055572 52.3741007,19.0535295 C52.3741007,26.0688453 58.9208633,42.8831365 72.0143885,69.4964029 Z"></path>
               <path d="M72.0143885,140 C85.1079137,113.386734 91.6546763,96.5724425 91.6546763,89.5571266 C91.6546763,79.0341528 82.8614199,70.5035971 72.0143885,70.5035971 C61.1673571,70.5035971 52.3741007,79.0341528 52.3741007,89.5571266 C52.3741007,96.5724425 58.9208633,113.386734 72.0143885,140 Z" transform="translate(72.014388, 105.251799) scale(1, -1) translate(-72.014388, -105.251799) "></path>
               <path d="M103.23741,86.618705 C116.330935,60.0054386 122.877698,43.1911475 122.877698,36.1758317 C122.877698,25.6528579 114.084441,17.1223022 103.23741,17.1223022 C92.3903787,17.1223022 83.5971223,25.6528579 83.5971223,36.1758317 C83.5971223,43.1911475 90.1438849,60.0054386 103.23741,86.618705 Z" fill="#FCE6C7" transform="translate(103.237410, 51.870504) rotate(60.000000) translate(-103.237410, -51.870504) "></path>
@@ -21,12 +22,11 @@
           <p class="top-catch__p" v-html="currentCatch"></p>
           <router-link to="">
             Link to Works<svg class="c-arrow-link" width="50px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <path d="M0 4 L30 4 L20 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
+              <path d="M0 4 L30 4 L20 0" stroke="#b5b5b5" stroke-width="1" fill="none" stroke-linecap="square"></path>
             </svg>
           </router-link>
         </div>
-      </div>
-      <!-- <p class="top-paragraph">初めまして、ゆかです。<br>まずは<router-link to="/About-me">自己紹介</router-link>をさせてください :)</p> -->
+      </div> -->
       <!-- <pagination prev="none" next="/About-me"></pagination> -->
     </div>
     <div class="l-main__footer l-wrap">
@@ -38,11 +38,13 @@
 <script>
 import anime from "animejs"
 import MainNav from '@/components/MainNav.vue'
+import TopCatch from '@/components/TopCatch.vue'
 
 export default {
   name: 'Index',
   components: {
-    MainNav
+    MainNav,
+    TopCatch
   },
   data() {
     return {
@@ -59,9 +61,9 @@ export default {
     }
   },
   mounted() {
-    this.updateCatch();
+    // this.updateCatch();
     setInterval(() => {
-      this.updateCatch();
+      // this.updateCatch();
     }, 5000);
   },
   methods: {
@@ -93,7 +95,7 @@ export default {
           translateX: [0, -20],
           opacity: [1, 0],
           easing: "easeInExpo",
-          duration: 2000,
+          duration: 1600,
           delay: (el, i) => 100 + 20 * i
         });
     }
@@ -110,6 +112,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  .l-main__section {
+    display: flex;
+  }
 }
 
 .top-catch {
@@ -151,7 +156,7 @@ export default {
     margin-top: 40px;
     // color: $color-link;
     font-family: $accent-font;
-    font-size: rem(11);
+    font-size: rem(12);
     font-weight: 300;
     letter-spacing: .12em;
     text-align: right;
