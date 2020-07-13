@@ -7,6 +7,7 @@ import "./assets/scss/base.scss";
 import "./assets/scss/js.scss";
 import "./assets/scss/animation.scss";
 import "./assets/scss/layout.scss";
+import "./assets/scss/components.scss";
 
 Vue.config.productionTip = false
 

@@ -30,7 +30,7 @@ export default {
   align-items: center;
   position: fixed;
   top: 27px;
-  right: 20px;
+  right: $padding-sp;
   width: 50px;
   height: 24px;
   z-index: 9999;
@@ -69,8 +69,13 @@ export default {
     }
   }
 }
+@include media-breakpoint-up-md {
+  .toggle-menu {
+    right: $padding-md;
+  }
+}
 
-@include media-pc {
+@include media-breakpoint-up-lg {
   .toggle-menu {
     display: none;
   }

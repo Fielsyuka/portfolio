@@ -2,13 +2,14 @@
   <div id="app">
     <toggle-menu @toggle-menu="toggleMenu"></toggle-menu>
     <header class="l-header">
-      <h1 class="site-title"><router-link to="/">Portfolio<span class="site-title__sub">Yuka.K</span></router-link></h1>
+      <h1><router-link to="/" class="site-title">Portfolio<span class="site-title__sub">Yuka.K</span></router-link></h1>
     </header>
     <main class="l-main">
-      <div class="l-main__inner l-wrap">
-        <transition name="blur" mode="out-in">
-          <router-view />
-        </transition>
+      <div class="l-main__inner">
+          <transition name="blur" mode="out-in">
+            <router-view />
+          </transition>
+
       </div>
     </main>
     <aside class="l-aside">

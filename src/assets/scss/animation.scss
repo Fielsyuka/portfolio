@@ -24,11 +24,19 @@
 
 //slide
 .slide-in-left {
-  animation: slide-in-x .8s linear forwards;
+  animation: slide-in-left .8s linear forwards;
 }
-@keyframes slide-in-x {
+@keyframes slide-in-left {
   0% {
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -40,5 +48,22 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+//line
+
+@keyframes line-draw {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100px;
   }
 }

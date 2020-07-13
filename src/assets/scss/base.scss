@@ -27,7 +27,7 @@ a {
   transition: opacity .5s;
 }
 
-a:hover {
+a:not(.site-title):hover {
   color: $color-link;
   // text-decoration: underline;
   opacity: .3;
@@ -35,6 +35,12 @@ a:hover {
   text-decoration: none;
   transition: filter .3s;
   transition: opacity .5s;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* font */

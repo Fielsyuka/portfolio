@@ -1,6 +1,13 @@
 //ページ余白
 $padding-sp: 20px;
+$padding-md: 40px;
 $padding-pc: 50px;
+
+//ページ幅
+$page-width-sp: calc(100vw - 20px);
+$page-width-sp: calc(100vw - 20px);
+$page-width-pc: 60vw;
+$page-max-width: 780px;
 
 //カラー
 $color-base: #232732;
@@ -23,7 +30,7 @@ $base-font-size: 16;
 $base-font: 'Noto Sans JP', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, "平成ゴシック", "メイリオ", "Meiryo", Helvetica, Arial, Verdana, "ＭＳ Ｐゴシック", "MS UI Gothic", sans-serif;
 $accent-font: 'Nunito', sans-serif;
 $eng-font:  'Barlow Semi Condensed', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;900&&family=Nunito:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&&family=Nunito:wght@300&display=swap');
 
 // ブレークポイント
 //　PCファースト
