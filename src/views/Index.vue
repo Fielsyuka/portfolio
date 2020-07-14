@@ -114,86 +114,10 @@ export default {
   height: 100%;
   .l-main__section {
     display: flex;
-  }
-}
-
-.top-catch {
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-
-}
-
-.top-catch__flower {
-  width: 50%;
-  max-width: 180px;
-  margin: 0 auto;
-
-  svg {
-    max-width: 100%;
-  }
-}
-
-.top-catch__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-top: 20px;
-  line-height: 1;
-
-  p {
-    // text-shadow: 3px 3px 2px rgba(165, 214, 16, 0.5);
-    color: $color-base;
-    font-family: $accent-font;
-    font-size: rem(18);
-    font-weight: 300;
-    letter-spacing: .12em;
-  }
-
-  a {
-    display: block;
-    margin-top: 40px;
-    // color: $color-link;
-    font-family: $accent-font;
-    font-size: rem(12);
-    font-weight: 300;
-    letter-spacing: .12em;
-    text-align: right;
-  }
-}
-
-
-@include media-breakpoint-up-md {
-  .top-catch {
-    display: flex;
-    align-items: center;
-
-    padding: 50px;
-  }
-
-  .top-catch__text {
-    width: 70%;
-    margin-left: 10%;
-    text-align: left;
-
-    a {
-      text-align: left;
-    }
+    flex-direction: column;
+    justify-content: center;
 
   }
 }
 
-@include media-breakpoint-up-lg {
-  .top-catch {
-    padding: 50px;
-
-    // margin-left: -($padding-pc);
-    .top-catch__text {
-      p {
-        font-size: rem(28);
-      }
-    }
-  }
-}
 </style>
