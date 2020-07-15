@@ -43,14 +43,19 @@ Vue.use(VueRouter)
         name: 'Wordpress',
         component: () => import(/* webpackChunkName: "HtmlAndCss" */ '../views/Wordpress.vue')
       },
-    ]
+      {
+        path: 'react',
+        name: 'React',
+        component: () => import(/* webpackChunkName: "HtmlAndCss" */ '../views/React.vue')
+      },    ]
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  
 })
 
 export default router

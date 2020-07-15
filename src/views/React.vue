@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="l-main__section l-wrap">
-      <page-heading page-name="Javascript" class="shadow-js"></page-heading>
+      <page-heading page-name="React" class="shadow-react"></page-heading>
       <p class="works-subtitle">[ Works ]</p>
       <p class="works-overview">既存テーマのカスタマイズ、オリジナルテーマの開発、プラグインによる様々な機能の実装が可能です。</p>
       <h3 class="works-heading01">過去の実績</h3>
@@ -37,7 +37,7 @@ import Pagination from '@/components/Pagination.vue'
 
 export default {
 
-  name: 'Javasctipt',
+  name: 'React',
   components: {
     PageHeading,
     WorksItem,
@@ -46,12 +46,12 @@ export default {
   data() {
     return {
       prev: {
-        name: "Wordpress",
-        link: "/works/wordpress"
-      },
-      next: {
         name: "Vue",
         link: "/works/vue"
+      },
+      next: {
+        name: "HTML & CSS",
+        link: "/works/html-and-css"
       }
     }
   }

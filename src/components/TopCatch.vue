@@ -7,15 +7,15 @@
           <path d="M103.23741,86.618705 C116.330935,60.0054386 122.877698,43.1911475 122.877698,36.1758317 C122.877698,25.6528579 114.084441,17.1223022 103.23741,17.1223022 C92.3903787,17.1223022 83.5971223,25.6528579 83.5971223,36.1758317 C83.5971223,43.1911475 90.1438849,60.0054386 103.23741,86.618705 Z" transform="translate(103.237410, 51.870504) rotate(60.000000) translate(-103.237410, -51.870504)" fill="#9fd0fc" class="fl-wp"></path>
           <path d="M102.230216,121.870504 C115.323741,95.2572372 121.870504,78.4429461 121.870504,71.4276302 C121.870504,60.9046564 113.077247,52.3741007 102.230216,52.3741007 C91.3831844,52.3741007 82.5899281,60.9046564 82.5899281,71.4276302 C82.5899281,78.4429461 89.1366906,95.2572372 102.230216,121.870504 Z" transform="translate(102.230216, 87.122302) scale(1, -1) rotate(60.000000) translate(-102.230216, -87.122302)" fill="#ffebb2" class="fl-js"></path>
           <path d="M72.0143885,140 C85.1079137,113.386734 91.6546763,96.5724425 91.6546763,89.5571266 C91.6546763,79.0341528 82.8614199,70.5035971 72.0143885,70.5035971 C61.1673571,70.5035971 52.3741007,79.0341528 52.3741007,89.5571266 C52.3741007,96.5724425 58.9208633,113.386734 72.0143885,140 Z" transform="translate(72.014388, 105.251799) scale(1, -1) translate(-72.014388, -105.251799)" fill="#abeccf" class="fl-vue"></path>
-          <path d="M40.7913669,86.618705 C53.8848921,60.0054386 60.4316547,43.1911475 60.4316547,36.1758317 C60.4316547,25.6528579 51.6383983,17.1223022 40.7913669,17.1223022 C29.9443355,17.1223022 21.1510791,25.6528579 21.1510791,36.1758317 C21.1510791,43.1911475 27.6978417,60.0054386 40.7913669,86.618705 Z" transform="translate(40.791367, 51.870504) scale(-1, 1) rotate(60.000000) translate(-40.791367, -51.870504)" fill="#b8eaf8" class="fl-react"></path>
-          <path d="M40.7913669,121.870504 C53.8848921,95.2572372 60.4316547,78.4429461 60.4316547,71.4276302 C60.4316547,60.9046564 51.6383983,52.3741007 40.7913669,52.3741007 C29.9443355,52.3741007 21.1510791,60.9046564 21.1510791,71.4276302 C21.1510791,78.4429461 27.6978417,95.2572372 40.7913669,121.870504 Z" transform="translate(40.791367, 87.122302) scale(-1, -1) rotate(60.000000) translate(-40.791367, -87.122302)" class="fl-6"></path>
+          <path d="M40.7913669,121.870504 C53.8848921,95.2572372 60.4316547,78.4429461 60.4316547,71.4276302 C60.4316547,60.9046564 51.6383983,52.3741007 40.7913669,52.3741007 C29.9443355,52.3741007 21.1510791,60.9046564 21.1510791,71.4276302 C21.1510791,78.4429461 27.6978417,95.2572372 40.7913669,121.870504 Z" transform="translate(40.791367, 87.122302) scale(-1, -1) rotate(60.000000) translate(-40.791367, -87.122302)" fill="#b8eaf8" class="fl-react"></path>
+          <path d="M40.7913669,86.618705 C53.8848921,60.0054386 60.4316547,43.1911475 60.4316547,36.1758317 C60.4316547,25.6528579 51.6383983,17.1223022 40.7913669,17.1223022 C29.9443355,17.1223022 21.1510791,25.6528579 21.1510791,36.1758317 C21.1510791,43.1911475 27.6978417,60.0054386 40.7913669,86.618705 Z" transform="translate(40.791367, 51.870504) scale(-1, 1) rotate(60.000000) translate(-40.791367, -51.870504)" fill="#dac6f5" class="fl-about"></path>
         </g>
       </svg>
     </div>
     <div class="top-catch__text">
       <router-link class="top-catch__text__main" :class="lists[0].classText" :to="lists[0].link" v-html="currentName" v-bind:style="this.lists[0].style"></router-link>
       <router-link class="top-catch__text__sub" :to="lists[0].link">
-        Works<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        {{lists[0].linkText}}<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M0 4 L30 4 L20 0" stroke="#b5b5b5" stroke-width="1" fill="none" stroke-linecap="square"></path>
         </svg>
       </router-link>
@@ -33,35 +33,47 @@ export default {
     return {
       lists: [
         {
+          classSvg: 'is-react',
+          name: 'React.js',
+          link: '/works/react',
+          linkText: 'Works',
+          classText: 'shadow-react'
+        },
+        {
+          classSvg: 'is-about',
+          name: 'I Love Coding!',
+          link: '/about-me',
+          linkText: 'About me',
+          classText: 'shadow-about'
+        },
+        {
           classSvg: 'is-html',
           name: 'HTML & CSS',
-          link: '/Works/HTML-and-CSS',
+          link: '/works/html-and-css',
+          linkText: 'Works',
           classText: 'shadow-html'
         },
         {
           classSvg: 'is-wp',
           name: 'Wordpress',
-          link: '/Works/Wordpress',
+          link: '/works/wordpress',
+          linkText: 'Works',
           classText: 'shadow-wordpress'
         },
         {
           classSvg: 'is-js',
           name: 'Javascript',
-          link: '/Works/Javascript',
+          link: '/works/javascript',
+          linkText: 'Works',
           classText: 'shadow-javascript'
         },
         {
           classSvg: 'is-vue',
           name: 'Vue.js',
-          link: '/Works/Vue',
+          link: '/works/vue',
+          linkText: 'Works',
           classText: 'shadow-vue'
         },
-        {
-          classSvg: 'is-react',
-          name: 'React.js',
-          link: '/Works/React',
-          classText: 'shadow-react'
-        }
       ],
       currentName: '',
     }
@@ -148,11 +160,12 @@ export default {
     &.is-vue path.fl-vue {
       animation: fill-show .2s linear 1 forwards;
     }
-
     &.is-react path.fl-react {
       animation: fill-show .2s linear 1 forwards;
     }
-  }
+    &.is-about path.fl-about {
+      animation: fill-show .2s linear 1 forwards;
+    }  }
 }
 
 .top-catch__text {
