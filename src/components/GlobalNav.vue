@@ -63,8 +63,8 @@ export default {
   display: block;
   position: absolute;
   top: 1.7em;
-  right: -30vw;
-  width: 26vw;
+  right: -150px;
+  width: 100px;
   height: 1px;
   background-color: $color-line;
 }

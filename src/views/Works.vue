@@ -1,28 +1,30 @@
 <template>
-  <section class="l-main__section section-works">
-    <page-heading></page-heading>
-    <pagination prev="/About-me" next="none"></pagination>
+  <section class="section-works">
+    <div class="l-main__header">
+      <main-nav></main-nav>
+    </div>
+    <router-view></router-view>
   </section>
 </template>
-
 <script>
-import PageHeading from '@/components/PageHeading.vue'
-import Pagination from '@/components/Pagination.vue'
+import MainNav from '@/components/MainNav.vue'
+// import MainFooter from '@/components/MainFooter.vue'
+
 
 export default {
   name: 'Works',
   components: {
-    PageHeading,
-    Pagination,
+    MainNav,
+    
+    // MainFooter,
   },
-  data () {
+  data() {
     return {
 
     }
   }
 }
 </script>
+<style lang="scss">
 
-<style lang="scss" scoped>
-@import "../assets/scss/_mixin.scss";
 </style>

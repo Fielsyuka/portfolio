@@ -27,7 +27,7 @@ a {
   transition: opacity .5s;
 }
 
-a:not(.site-title):hover {
+a:not(.site-title):not(.top-catch__text__main):hover {
   color: $color-link;
   // text-decoration: underline;
   opacity: .3;

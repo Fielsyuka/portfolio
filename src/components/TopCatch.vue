@@ -1,7 +1,7 @@
 <template>
   <div class="top-catch">
     <div class="top-catch__flower">
-      <svg :class="lists[0].class" viewBox="-1 -1 146 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg :class="lists[0].classSvg" viewBox="-1 -1 146 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="#b5b5b5" stroke-width="1" fill="none" fill-rule="evenodd">
           <path d="M72.0143885,69.4964029 C85.1079137,42.8831365 91.6546763,26.0688453 91.6546763,19.0535295 C91.6546763,8.53055572 82.8614199,0 72.0143885,0 C61.1673571,0 52.3741007,8.53055572 52.3741007,19.0535295 C52.3741007,26.0688453 58.9208633,42.8831365 72.0143885,69.4964029 Z" fill="#f7d8e3" class="fl-html"></path>
           <path d="M103.23741,86.618705 C116.330935,60.0054386 122.877698,43.1911475 122.877698,36.1758317 C122.877698,25.6528579 114.084441,17.1223022 103.23741,17.1223022 C92.3903787,17.1223022 83.5971223,25.6528579 83.5971223,36.1758317 C83.5971223,43.1911475 90.1438849,60.0054386 103.23741,86.618705 Z" transform="translate(103.237410, 51.870504) rotate(60.000000) translate(-103.237410, -51.870504)" fill="#9fd0fc" class="fl-wp"></path>
@@ -12,12 +12,14 @@
         </g>
       </svg>
     </div>
-    <router-link class="top-catch__text" :to="lists[0].link">
-      <span class="top-catch__text__main" v-html="currentName" v-bind:style="this.lists[0].style"></span>
-      <span class="top-catch__text__sub">Works<svg class="c-arrow-link" width="50px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div class="top-catch__text">
+      <router-link class="top-catch__text__main" :class="lists[0].classText" :to="lists[0].link" v-html="currentName" v-bind:style="this.lists[0].style"></router-link>
+      <router-link class="top-catch__text__sub" :to="lists[0].link">
+        Works<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M0 4 L30 4 L20 0" stroke="#b5b5b5" stroke-width="1" fill="none" stroke-linecap="square"></path>
-        </svg></span>
-    </router-link>
+        </svg>
+      </router-link>
+    </div>
   </div>
 </template>
 <script>
@@ -29,46 +31,36 @@ export default {
 
   data() {
     return {
-      lists: [{
-          class: 'is-html',
+      lists: [
+        {
+          classSvg: 'is-html',
           name: 'HTML & CSS',
-          link: '/Works/HTML & CSS',
-          style: {
-            textShadow: '3px 3px 2px rgba(247, 216, 227, 0.8)'
-          }
+          link: '/Works/HTML-and-CSS',
+          classText: 'shadow-html'
         },
         {
-          class: 'is-wp',
+          classSvg: 'is-wp',
           name: 'Wordpress',
           link: '/Works/Wordpress',
-          style: {
-            textShadow: '3px 3px 2px rgba(159, 208, 252, 0.8)'
-          }
+          classText: 'shadow-wordpress'
         },
         {
-          class: 'is-js',
+          classSvg: 'is-js',
           name: 'Javascript',
           link: '/Works/Javascript',
-          style: {
-            textShadow: '3px 3px 2px rgba(255, 235, 178, 0.8)'
-          }
-
+          classText: 'shadow-javascript'
         },
         {
-          class: 'is-vue',
+          classSvg: 'is-vue',
           name: 'Vue.js',
           link: '/Works/Vue',
-          style: {
-            textShadow: '3px 3px 2px rgba(171, 236, 207, 0.8)'
-          }
+          classText: 'shadow-vue'
         },
         {
-          class: 'is-react',
+          classSvg: 'is-react',
           name: 'React.js',
           link: '/Works/React',
-          style: {
-            textShadow: '3px 3px 2px rgba(184, 234, 248, 0.8)'
-          }
+          classText: 'shadow-react'
         }
       ],
       currentName: '',
@@ -126,12 +118,11 @@ export default {
 .top-catch {
   position: relative;
   width: 100%;
-  padding: 20px;
   text-align: center;
 }
 
 .top-catch__flower {
-  width: 50%;
+  width: 48%;
   max-width: 180px;
   margin: 0 auto;
 
@@ -168,7 +159,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 20px;
   line-height: 1;
 }
 
@@ -176,26 +167,29 @@ export default {
   display: block;
   color: $color-base;
   font-family: $accent-font;
-  font-size: rem(24);
+  font-size: rem(26);
   font-weight: 300;
   letter-spacing: .12em;
 }
 
 .top-catch__text__sub {
   display: block;
-  margin-top: 30px;
+  margin-top: 50px;
   font-family: $accent-font;
   font-size: rem(14);
   font-weight: 300;
   letter-spacing: .12em;
   text-align: right;
 }
+.top-catch__arrow {
+  margin-left: .8em;
+}
 
 @include media-breakpoint-up-md {
   .top-catch {
     display: flex;
     align-items: center;
-    padding: 50px;
+    padding: 0 50px;
   }
 
   .top-catch__text {
@@ -217,7 +211,12 @@ export default {
 
 @include media-breakpoint-up-lg {
   .top-catch {
-    padding: 50px;
+    padding: 0 30px;
+  }
+
+  .top-catch__flower {
+    width: 44%;
+    max-width: 192px;
   }
 
   .top-catch__text__main {
