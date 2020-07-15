@@ -19,8 +19,6 @@
       font-size: rem(11);
       letter-spacing: .08em;
     }
-
-    a {}
   }
 }
 
@@ -43,19 +41,18 @@
 }
 
 .l-main__inner {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
   margin-right: $padding-sp;
   margin-left: $padding-sp;
   background: #fff;
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, .1);
-  // border: 1px solid $color-line;
   z-index: 100;
 }
 
-.l-main__wrapper {
+.l-main__header {
+  height: 54px;
+  line-height: 53px;
 }
 
 .l-main__footer {
@@ -124,25 +121,30 @@
     padding-left: $padding-md;
     padding-right: $padding-md;
   }
+
   .l-main {
     padding-bottom: 40px;
   }
+
   .l-main__inner {
-    height: calc(100vh - 120px);
     margin-right: $padding-md;
     margin-left: $padding-md;
   }
+
   .l-main__wrapper {
     height: calc(100vh - 120px);
   }
 
-  .l-main__section {
-
+  .l-main__header {
+    height: 70px;
+    line-height: 69px;
   }
+
   .l-main__footer {
     height: 70px;
     line-height: 70px;
   }
+
   .l-aside {
     &::before {
       left: -20px;
@@ -184,6 +186,7 @@
   }
 
   .l-main__inner {
+    overflow: auto;
     width: $page-width-pc;
     max-width: $page-max-width;
     height: 100vh;
@@ -193,10 +196,14 @@
     height: 100vh;
   }
 
-  .l-main__section {
+  .l-main__section {}
+
+  .l-main__header {
+    height: 100px;
+    line-height: 99px;
   }
 
-    .l-main__footer {
+  .l-main__footer {
     height: 100px;
     line-height: 100px;
   }
