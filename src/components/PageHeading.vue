@@ -47,7 +47,7 @@ export default {
 .page-heading {
   color: $color-base;
   font-family: $accent-font;
-  font-size: rem(26);
+  font-size: rem(30);
   letter-spacing: .16em;
 }
 

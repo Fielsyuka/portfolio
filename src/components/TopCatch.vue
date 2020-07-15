@@ -122,7 +122,7 @@ export default {
 }
 
 .top-catch__flower {
-  width: 48%;
+  width: 58%;
   max-width: 180px;
   margin: 0 auto;
 
