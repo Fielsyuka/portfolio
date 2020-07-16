@@ -31,8 +31,7 @@ export default {
 
   data() {
     return {
-      lists: [
-        {
+      lists: [{
           classSvg: 'is-react',
           name: 'React.js',
           link: '/works/react',
@@ -134,7 +133,7 @@ export default {
 }
 
 .top-catch__flower {
-  width: 52%;
+  width: 50%;
   max-width: 170px;
   margin: 0 auto;
 
@@ -160,12 +159,15 @@ export default {
     &.is-vue path.fl-vue {
       animation: fill-show .2s linear 1 forwards;
     }
+
     &.is-react path.fl-react {
       animation: fill-show .2s linear 1 forwards;
     }
+
     &.is-about path.fl-about {
       animation: fill-show .2s linear 1 forwards;
-    }  }
+    }
+  }
 }
 
 .top-catch__text {
@@ -194,6 +196,7 @@ export default {
   letter-spacing: .12em;
   text-align: right;
 }
+
 .top-catch__arrow {
   margin-left: .8em;
 }
@@ -202,12 +205,18 @@ export default {
   .top-catch {
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    justify-content: space-around;
+    // padding: 0 8vw;
+  }
+
+  .top-catch__flower {
+    width: 55%;
+    max-width: 220px;
+    margin: 0;
   }
 
   .top-catch__text {
-    width: 70%;
-    margin-left: 10%;
+    width: 45%;
     margin-top: 0;
     text-align: left;
   }
@@ -223,17 +232,28 @@ export default {
 }
 
 @include media-breakpoint-up-lg {
-  .top-catch {
-    padding: 0 30px;
-  }
-
   .top-catch__flower {
-    width: 44%;
-    max-width: 192px;
+    width: 48%;
+    max-width: 180px;
+  }
+  .top-catch__text {
+    width: 52%;
+    margin-top: 0;
+    text-align: left;
   }
 
   .top-catch__text__main {
     font-size: rem(34);
+  }
+}
+
+@include media-breakpoint-up-xl {
+  .top-catch__flower {
+    max-width: 200px;
+  }
+
+  .top-catch__text__main {
+    font-size: rem(38);
   }
 }
 

@@ -2,25 +2,28 @@
   <div class="global-nav">
     <nav>
       <ul class="nav__list">
-        <li class="nav__list-item"><router-link to="/">Top</router-link></li>
-        <li class="nav__list-item"><router-link to="/About-me">About me</router-link></li>
-        <li class="nav__list-item"><router-link to="/Works">Works</router-link></li>
-      </ul> 
+        <li class="nav__list-item">
+          <router-link to="/">Top</router-link>
+        </li>
+        <li class="nav__list-item">
+          <router-link to="/About-me">About me</router-link>
+        </li>
+        <li class="nav__list-item">
+          <router-link to="/Works">Works</router-link>
+        </li>
+      </ul>
     </nav>
   </div>
 </template>
-
 <script>
 export default {
 
   name: 'GlobalNav',
 
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
-  methods: {
-  },
+  methods: {},
   watch: {
     $route() {
       this.$emit('close-menu');
@@ -28,14 +31,14 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
 @import "../assets/scss/_mixin.scss";
 
 .nav__list {
   list-style: none;
 }
-.nav__list-item > a {
+
+.nav__list-item>a {
   display: block;
   position: relative;
   padding: 1em;
@@ -47,18 +50,20 @@ export default {
   transition: filter .3s;
   transition: opacity .5s;
 }
-.nav__list-item > a:hover {
+
+.nav__list-item>a:hover {
   opacity: .3;
   filter: blur(1px);
   text-decoration: none;
   transition: filter .3s;
   transition: opacity .5s;
 }
-.nav__list-item > a.router-link-exact-active {
+
+.nav__list-item>a.router-link-exact-active {
   color: $color-sub;
 }
 
-.nav__list-item > a.router-link-exact-active::after{
+.nav__list-item>a.router-link-exact-active::after {
   content: "";
   display: block;
   position: absolute;
@@ -69,4 +74,10 @@ export default {
   background-color: $color-line;
 }
 
+@include media-breakpoint-up-md {
+  .nav__list-item>a.router-link-exact-active::after {
+    right: -22vw;
+    width: 20vw;
+  }
+}
 </style>
