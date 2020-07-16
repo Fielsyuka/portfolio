@@ -9,7 +9,7 @@ import "./assets/scss/layout/layout.scss";
 import "./assets/scss/components/animation.scss";
 import "./assets/scss/components/line.scss";
 import "./assets/scss/components/text-shadow.scss";
-import "./assets/scss/components/works.scss";
+import "./assets/scss/components/page.scss";
 
 Vue.config.productionTip = false
 

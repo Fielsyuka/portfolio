@@ -22,5 +22,41 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/_mixin.scss";
+.works-item {
+  margin-top: 30px;
+  margin-left: 46px;
+}
+.works-item + .works-item {
+  margin-top: 34px;
+}
+
+.works-item__name {
+  position: relative;
+  color: $color-base;
+  font-size: rem(16);
+  letter-spacing: .1em;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -46px;
+    width: 30px;
+    height: 1px;
+    background-color: $color-line;
+  }
+}
+.works-item__time {
+  margin-top: 5px;
+  color: $color-theme;
+  font-size: rem(12);
+  letter-spacing: .1em;
+}
+.works-item__texts {
+  margin-top: 12px;
+  line-height: 1.8;
+  text-align: justify;
+}
 </style>

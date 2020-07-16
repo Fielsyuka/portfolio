@@ -1,37 +1,34 @@
 <template>
   <div>
     <div class="l-main__section l-wrap">
-      <page-heading page-name="Javascript" class="shadow-js"></page-heading>
-      <p class="works-subtitle">[ Works ]</p>
-      <p class="works-overview">既存テーマのカスタマイズ、オリジナルテーマの開発、プラグインによる様々な機能の実装が可能です。</p>
-      <h3 class="works-heading01">過去の実績</h3>
+      <page-heading page-name="Javascript" class="shadow-javascript"></page-heading>
+      <p class="page-subtitle">[ Works ]</p>
+      <p class="page-overview">WEB制作の実務では主にjQueryやライブラリを使用しますが、Javascriptの理解を深めるために業務外でWEBアプリを制作してアウトプットをしています。</p>
+      <h3 class="page-heading01">制作実績</h3>
       <works-item>
-        <template v-slot:name>不動産会社コーポレートサイト</template>
+        <template v-slot:name>家計簿WEBアプリ</template>
         <template v-slot:time-1>2018.09</template>
         <template v-slot:time-2>約14日間</template>
-        <template v-slot:texts>トップページ＋下層固定ページ（5P）＋物件用のカスタム投稿テンプレート（2P）を作成。また、プラグイン”Really Simple CSV Importer”を使用し、CSVファイルをインポートするだけで大量の物件情報を投稿・管理できる機能を実装しました。</template>
+        <template v-slot:texts>準備中</template>
       </works-item>
       <works-item>
-        <template v-slot:name>医療系人材派遣リクルートサイト</template>
-        <template v-slot:time-1>2019.02</template>
-        <template v-slot:time-2>約21日間</template>
-        <template v-slot:texts>新卒・既卒それぞれのトップページ＋下層固定ページ（2P）＋カスタム投稿テンプレートを作成しました。社員インタビューページ用のカスタム投稿では”Advanced Custom Fields”を使用し、解説や入力例などを表示させることでデザインが崩れないように工夫しました。</template>
+        <template v-slot:name>サイト内検索</template>
+        <template v-slot:time-1>2020.04</template>
+        <template v-slot:time-2>約3日間</template>
+        <template v-slot:texts>医療従事者向け書籍をWEBページ化するコーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。</template>
       </works-item>
-      <works-item>
-        <template v-slot:name>保育園ホームページ</template>
-        <template v-slot:time-1>2018.12</template>
-        <template v-slot:time-2>約10日間</template>
-        <template v-slot:texts>テキスト準備中</template>
-      </works-item>
+
     </div>
     <div class="l-main__footer l-wrap">
-      <span class="c-animation-line-right"></span>
-      <pagination :prev="prev" :next="next"></pagination>
+      <page-footer>
+        <pagination :prev="prev" :next="next"></pagination>
+      </page-footer>      
     </div>
   </div>
 </template>
 <script>
 import PageHeading from '@/components/PageHeading.vue'
+import PageFooter from '@/components/PageFooter.vue'
 import WorksItem from '@/components/WorksItem.vue'
 import Pagination from '@/components/Pagination.vue'
 
@@ -40,6 +37,7 @@ export default {
   name: 'Javasctipt',
   components: {
     PageHeading,
+    PageFooter,
     WorksItem,
     Pagination,
   },

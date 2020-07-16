@@ -134,8 +134,8 @@ export default {
 }
 
 .top-catch__flower {
-  width: 58%;
-  max-width: 180px;
+  width: 52%;
+  max-width: 170px;
   margin: 0 auto;
 
   svg {

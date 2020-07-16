@@ -37,7 +37,7 @@
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 60px;
-  background: url("../../images/flower_bg.png") repeat center center/contain fixed;
+  background: url("../../images/flower_bg.png") repeat center center/cover fixed;
   z-index: 1000;
 }
 
@@ -126,6 +126,7 @@
 
   .l-main {
     padding-bottom: 40px;
+    background: url("../../images/flower_bg.png") repeat top center/contain fixed;
   }
 
   .l-main__inner {

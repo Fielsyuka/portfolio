@@ -1,14 +1,14 @@
 <template>
   <div>
     <span class="c-animation-line-right"></span>
-    <p>main-footer</p>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
 
-  name: 'MainFooter',
+  name: 'PageFooter',
 
   data () {
     return {

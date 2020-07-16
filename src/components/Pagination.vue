@@ -1,14 +1,14 @@
 <template>
   <div class="pagination">
-    <router-link v-bind:to="prev.link" class="pagination__prev">
-      <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="prev != 'none'">
+    <router-link v-if="prev != 'none'" v-bind:to="prev.link" class="pagination__prev">
+      <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M30 4 L0 4 L10 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
-      <p class="pagination__text" v-if="prev != 'none'">{{ prev.name }}</p>
+      <p class="pagination__text">{{ prev.name }}</p>
     </router-link>
-    <router-link v-bind:to="next.link" class="pagination__next">
-      <p class="pagination__text" v-if="next != 'none'">{{ next.name }}</p>
-      <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" v-if="next != 'none'">
+    <router-link v-if="next != 'none'" v-bind:to="next.link" class="pagination__next">
+      <p class="pagination__text">{{ next.name }}</p>
+      <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M0 4 L30 4 L20 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
     </router-link>

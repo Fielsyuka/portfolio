@@ -1,43 +1,44 @@
 <template>
-  <div class="l-main__wrapper">
-    <section class="l-main__section section-about l-wrap">
-      <page-heading></page-heading>
-      <page-card>
-        <template v-slot:image>
-          <!-- <img src="../assets/images/yuka.jpg" alt="Yuka"> -->
-          <!-- <draw-picture file-name="yuka.jpg"></draw-picture> -->
-        </template>
-        <template v-slot:title>
-          <p class="font-small font-subcolor">WEBコーダー</p>
-          <h3 class="font-large">ゆか <span class="font-small">[ Yuka ]</span></h3>
-        </template>
-        <template v-slot:texts>
-          <p>東京の片隅に暮らすフリーランスWEBコーダーです。</p>
-          <p>30歳未経験でWEB業界に入り、現在{{num}}年目になりました。<br>...が、その間に2回の出産を経ているので実務経験は{{actual}}年程度です。</p>
-          <p>レスポンシブコーディングとWordpressのテーマ制作が得意です。<br>最近はJavasctiptに魅了され、VueやReactを学んでいます。<br></p>
-          <p>近い将来、フロントエンドエンジニアになる予定です！（希望）</p>
-        </template>
-      </page-card>
-      <pagination prev="/" next="/Works"></pagination>
-    </section>
-  </div>
+  <section class="section-about">
+    <div class="l-main__header">
+      <page-nav></page-nav>
+    </div>
+    <div class="l-main__section l-wrap">
+      <page-heading page-name="About me" class="shadow-about"></page-heading>
+      <h3 class="page-subtitle">[ ゆか ]</h3>
+      <p class="page-overview">30歳未経験でWEB業界に入り、現在{{num}}年目になりました。その間に2回の出産を経ているので実務経験は{{actual}}年程度です。3人のやんちゃな男の子を育てています。</p>
+      <p class="page-overview">色々な業種のお仕事を経験してきましたが、私にはWEBのお仕事がピカイチです。</p>
+      <h4 class="page-heading01">経歴</h4>
+    </div>
+    <div class="l-main__footer l-wrap">
+      <page-footer>
+        <pagination :prev="prev" :next="next"></pagination>
+      </page-footer>      
+    </div>
+  </section>
 </template>
 <script>
-// import DrawPicture from '@/components/DrawPicture.vue'
+import PageNav from '@/components/PageNav.vue'
 import PageHeading from '@/components/PageHeading.vue'
-import PageCard from '@/components/PageCard.vue'
+import PageFooter from '@/components/PageFooter.vue'
 import Pagination from '@/components/Pagination.vue'
 
 
 export default {
   name: 'About-me',
   components: {
+    PageNav,
     PageHeading,
-    PageCard,
+    PageFooter,
     Pagination,
   },
   data() {
     return {
+      prev: {
+        name: "Top",
+        link: "/"
+      },
+      next: "none",
       start: 2017,
       num: '',
       actual: ''

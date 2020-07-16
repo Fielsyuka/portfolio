@@ -1,26 +1,26 @@
 <template>
   <div class="section-top">
     <div class="l-main__header">
-      <main-nav></main-nav>
+      <page-nav></page-nav>
     </div>
     <div class="l-main__section l-wrap">
       <top-catch></top-catch>
     </div>
     <div class="l-main__footer l-wrap">
-      <main-footer></main-footer>
+      <page-footer></page-footer>
     </div>
   </div>
 </template>
 <script>
-import MainNav from '@/components/MainNav.vue'
-import MainFooter from '@/components/MainFooter.vue'
+import PageNav from '@/components/PageNav.vue'
+import PageFooter from '@/components/PageFooter.vue'
 import TopCatch from '@/components/TopCatch.vue'
 
 export default {
   name: 'Index',
   components: {
-    MainNav,
-    MainFooter,
+    PageNav,
+    PageFooter,
     TopCatch
   },
   data() {

@@ -1,7 +1,7 @@
 <template>
-  <div class="main-nav l-wrap">
-      <nav class="main-nav__inner">
-        <ul class="main-nav__list">
+  <div class="page-nav l-wrap">
+      <nav class="page-nav__inner">
+        <ul class="page-nav__list">
           <li><router-link to="/works/html-and-css">HTML & CSS</router-link></li>
           <li><router-link to="/works/wordpress">Wordpress</router-link></li>
           <li><router-link to="/works/javascript">Javascript</router-link></li>
@@ -16,7 +16,7 @@
 <script>
 export default {
 
-  name: 'MainNav',
+  name: 'PagenNav',
 
   data () {
     return {
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/_mixin.scss";
 
-.main-nav {
+.page-nav {
   overflow-x: hidden;
   position: relative;
   &::after {
@@ -45,13 +45,13 @@ export default {
   }
 }
 
-.main-nav__inner {
+.page-nav__inner {
   overflow-x: auto;
   position: relative;  
   width: 100%;
 }
 
-.main-nav__list {
+.page-nav__list {
   display: flex;
   li {
     flex-shrink: 0;
@@ -67,7 +67,7 @@ export default {
 
 
 @include media-breakpoint-up-md {
-  .main-nav__list {
+  .page-nav__list {
     li a {
       margin-right: 24px;
     }
