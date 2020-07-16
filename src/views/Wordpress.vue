@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="l-main__header">
+      <page-nav></page-nav>
+    </div>
     <div class="l-main__section l-wrap">
       <page-heading page-name="Wordpress" class="shadow-wordpress"></page-heading>
       <p class="page-subtitle">[ Works ]</p>
@@ -38,6 +41,7 @@
   </div>
 </template>
 <script>
+import PageNav from '@/components/PageNav.vue'
 import PageHeading from '@/components/PageHeading.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import WorksItem from '@/components/WorksItem.vue'
@@ -47,6 +51,7 @@ export default {
 
   name: 'Wordpress',
   components: {
+    PageNav,
     PageHeading,
     PageFooter,
     WorksItem,
@@ -55,12 +60,12 @@ export default {
   data() {
     return {
       prev: {
-        name: "HTML & CSS",
-        link: "/works/html-and-css"
+        name: 'HTML & CSS',
+        link: '/works/html-and-css'
       },
       next: {
-        name: "Javasctipt",
-        link: "/works/javascript"
+        name: 'Javasctipt',
+        link: '/works/javascript'
       }
     }
   }

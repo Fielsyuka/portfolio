@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="l-main__header">
+      <page-nav></page-nav>
+    </div>
     <div class="l-main__section l-wrap">
       <page-heading page-name="Javascript" class="shadow-javascript"></page-heading>
       <p class="page-subtitle">[ Works ]</p>
@@ -27,6 +30,7 @@
   </div>
 </template>
 <script>
+import PageNav from '@/components/PageNav.vue'
 import PageHeading from '@/components/PageHeading.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import WorksItem from '@/components/WorksItem.vue'
@@ -36,6 +40,7 @@ export default {
 
   name: 'Javasctipt',
   components: {
+    PageNav,
     PageHeading,
     PageFooter,
     WorksItem,
@@ -44,12 +49,12 @@ export default {
   data() {
     return {
       prev: {
-        name: "Wordpress",
-        link: "/works/wordpress"
+        name: 'Wordpress',
+        link: '/works/wordpress'
       },
       next: {
-        name: "Vue",
-        link: "/works/vue"
+        name: 'Vue',
+        link: '/works/vue'
       }
     }
   }

@@ -20,9 +20,13 @@ Vue.use(VueRouter)
   },
   {
     path: '/works',
-    name: 'Works',
     component: () => import(/* webpackChunkName: "Works" */ '../views/Works.vue'),
     children: [
+      {
+        path: '',
+        name: 'Works',
+        component: () => import(/* webpackChunkName: "HtmlAndCss" */ '../views/WorksTop.vue')
+      },
       {
         path: 'html-and-css',
         name: 'HTML & CSS',

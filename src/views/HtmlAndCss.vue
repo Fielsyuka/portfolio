@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="l-main__header">
+      <page-nav></page-nav>
+    </div>
     <div class="l-main__section l-wrap">
       <page-heading page-name="HTML & CSS" class="shadow-html"></page-heading>
       <p class="page-subtitle">[ Works ]</p>
@@ -32,6 +35,7 @@
   </div>
 </template>
 <script>
+import PageNav from '@/components/PageNav.vue'
 import PageHeading from '@/components/PageHeading.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import WorksItem from '@/components/WorksItem.vue'
@@ -41,6 +45,7 @@ export default {
 
   name: 'HtmlAndCss',
   components: {
+    PageNav,
     PageHeading,
     PageFooter,
     WorksItem,
@@ -49,12 +54,12 @@ export default {
   data() {
     return {
       prev: {
-        name: "React",
-        link: "/works/react"
+        name: 'React',
+        link: '/works/react'
       },
       next: {
-        name: "Wordpress",
-        link: "/works/wordpress"
+        name: 'Wordpress',
+        link: '/works/wordpress'
       }
     }
   }
