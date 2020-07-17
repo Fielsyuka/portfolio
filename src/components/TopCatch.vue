@@ -257,13 +257,18 @@ export default {
   }
 
   .top-catch__text__main {
-    font-size: rem(34);
+    font-size: rem(32);
   }
 }
 
 @include media-breakpoint-up-xl {
   .top-catch__flower {
-    max-width: 200px;
+    width: 40%;
+    max-width: none;
+    margin: 0 8%;
+  }
+  .top-catch__text {
+    // width: 50%;
   }
 
   .top-catch__text__main {

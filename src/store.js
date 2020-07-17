@@ -79,7 +79,7 @@ export default {
       ]
     },
     {
-      name: 'Vue',
+      name: 'Vue.js',
       shadowClass: 'shadow-vue',
       svgClass: 'is-vue',
       slug: 'vue',
@@ -101,7 +101,7 @@ export default {
       ]
     },
     {
-      name: 'React',
+      name: 'React.js',
       shadowClass: 'shadow-react',
       svgClass: 'is-react',
       slug: 'react',
