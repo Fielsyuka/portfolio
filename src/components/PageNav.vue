@@ -2,25 +2,36 @@
   <div class="page-nav l-wrap">
       <nav class="page-nav__inner">
         <ul class="page-nav__list">
-          <li><router-link to="/works/html-and-css">HTML & CSS</router-link></li>
+          <li v-for="skill in skills" :key="skill.id">
+            <router-link
+              :to="{
+                name: 'SkillsDetail',
+                params: { slug: skill.slug }
+              }"
+            >
+            {{ skill.name }}
+            </router-link>
+          </li>
+<!--           <li><router-link to="/works/html-and-css">HTML & CSS</router-link></li>
           <li><router-link to="/works/wordpress">Wordpress</router-link></li>
           <li><router-link to="/works/javascript">Javascript</router-link></li>
           <li><router-link to="/works/vue">Vue</router-link></li>
           <li><router-link to="/works/react">React</router-link></li>
-        </ul>
+ -->        </ul>
       </nav>
       <span class="c-animation-line-left"></span>
     </div>
 </template>
 
 <script>
+import store from "@/store.js";
 export default {
 
   name: 'PagenNav',
 
   data () {
     return {
-
+      skills: store.skills
     }
   }
 }

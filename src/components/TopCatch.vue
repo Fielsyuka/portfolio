@@ -1,7 +1,7 @@
 <template>
   <div class="top-catch">
     <div class="top-catch__flower">
-      <svg :class="lists[0].classSvg" viewBox="-1 -1 146 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg :class="lists[0].svgClass" viewBox="-1 -1 146 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="#b5b5b5" stroke-width="1" fill="none" fill-rule="evenodd">
           <path d="M72.0143885,69.4964029 C85.1079137,42.8831365 91.6546763,26.0688453 91.6546763,19.0535295 C91.6546763,8.53055572 82.8614199,0 72.0143885,0 C61.1673571,0 52.3741007,8.53055572 52.3741007,19.0535295 C52.3741007,26.0688453 58.9208633,42.8831365 72.0143885,69.4964029 Z" fill="#f7d8e3" class="fl-html"></path>
           <path d="M103.23741,86.618705 C116.330935,60.0054386 122.877698,43.1911475 122.877698,36.1758317 C122.877698,25.6528579 114.084441,17.1223022 103.23741,17.1223022 C92.3903787,17.1223022 83.5971223,25.6528579 83.5971223,36.1758317 C83.5971223,43.1911475 90.1438849,60.0054386 103.23741,86.618705 Z" transform="translate(103.237410, 51.870504) rotate(60.000000) translate(-103.237410, -51.870504)" fill="#9fd0fc" class="fl-wp"></path>
@@ -13,9 +13,45 @@
       </svg>
     </div>
     <div class="top-catch__text">
-      <router-link class="top-catch__text__main" :class="lists[0].classText" :to="lists[0].link" v-html="currentName" v-bind:style="this.lists[0].style"></router-link>
-      <router-link class="top-catch__text__sub" :to="lists[0].link">
-        {{lists[0].linkText}}<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <router-link 
+        v-if="lists[0].slug === '/about-me'"
+        class="top-catch__text__main"
+        v-html="currentName"
+        :class="lists[0].textClass"
+        :to="{
+          name: 'About',
+        }"
+      ></router-link>
+      <router-link 
+        v-if="lists[0].slug !== '/about-me'"
+        class="top-catch__text__main"
+        v-html="currentName"
+        :class="lists[0].textClass"
+        :to="{
+          name: 'SkillsDetail',
+          params: {slug: lists[0].slug}
+        }"
+      ></router-link>
+      <router-link 
+        v-if="lists[0].slug === '/about-me'"
+        class="top-catch__text__sub"
+        :to="{
+          name: 'About',
+        }"
+      >
+        About me<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0 4 L30 4 L20 0" stroke="#b5b5b5" stroke-width="1" fill="none" stroke-linecap="square"></path>
+        </svg>
+      </router-link>
+      <router-link 
+        v-if="lists[0].slug !== '/about-me'"
+        class="top-catch__text__sub"
+        :to="{
+          name: 'SkillsDetail',
+          params: {slug: lists[0].slug}
+        }"
+      >
+        Skills<svg class="top-catch__arrow" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M0 4 L30 4 L20 0" stroke="#b5b5b5" stroke-width="1" fill="none" stroke-linecap="square"></path>
         </svg>
       </router-link>
@@ -23,7 +59,8 @@
   </div>
 </template>
 <script>
-import anime from "animejs"
+import anime from 'animejs'
+import store from '@/store.js'
 
 export default {
 
@@ -31,48 +68,13 @@ export default {
 
   data() {
     return {
-      lists: [{
-          classSvg: 'is-react',
-          name: 'React.js',
-          link: '/works/react',
-          linkText: 'Works',
-          classText: 'shadow-react'
-        },
+      lists: [
         {
-          classSvg: 'is-about',
           name: 'I Love Coding!',
-          link: '/about-me',
-          linkText: 'About me',
-          classText: 'shadow-about'
-        },
-        {
-          classSvg: 'is-html',
-          name: 'HTML & CSS',
-          link: '/works/html-and-css',
-          linkText: 'Works',
-          classText: 'shadow-html'
-        },
-        {
-          classSvg: 'is-wp',
-          name: 'Wordpress',
-          link: '/works/wordpress',
-          linkText: 'Works',
-          classText: 'shadow-wordpress'
-        },
-        {
-          classSvg: 'is-js',
-          name: 'Javascript',
-          link: '/works/javascript',
-          linkText: 'Works',
-          classText: 'shadow-javascript'
-        },
-        {
-          classSvg: 'is-vue',
-          name: 'Vue.js',
-          link: '/works/vue',
-          linkText: 'Works',
-          classText: 'shadow-vue'
-        },
+          slug: '/about-me',
+          textClass: 'shadow-about',
+          svgClass: 'is-about'
+        }
       ],
       currentName: '',
     }
@@ -83,6 +85,18 @@ export default {
         this.fadeInOut();
       }, 1);
     }
+  },
+  created() {
+    const skills = store.skills;
+    skills.forEach( (el) => {
+      const skillList = {
+        name: el.name,
+        slug: el.slug,
+        textClass: el.shadowClass,
+        svgClass: el.svgClass
+      }
+      this.lists.push(skillList);
+    });
   },
   mounted() {
     this.updateList();

@@ -1,13 +1,27 @@
 <template>
   <div class="pagination">
-    <router-link v-if="prev != 'none'" v-bind:to="prev.link" class="pagination__prev">
+    <router-link
+      v-if="prevSlug != undefined"
+      :to="{
+        name: 'SkillsDetail',
+        params: { slug: prevSlug }
+      }"
+      class="pagination__prev"
+    >
       <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M30 4 L0 4 L10 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
-      <p class="pagination__text">{{ prev.name }}</p>
+      <p class="pagination__text">{{ prevName }}</p>
     </router-link>
-    <router-link v-if="next != 'none'" v-bind:to="next.link" class="pagination__next">
-      <p class="pagination__text">{{ next.name }}</p>
+    <router-link
+      v-if="nextSlug != undefined"
+      :to="{
+        name: 'SkillsDetail',
+        params: { slug: nextSlug }
+      }"
+      class="pagination__next"
+    >
+      <p class="pagination__text">{{ nextName }}</p>
       <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M0 4 L30 4 L20 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
       </svg>
@@ -19,14 +33,10 @@ export default {
 
   name: 'Pagination',
   props: {
-    prev: {
-      name: String,
-      link: String
-    },
-    next: {
-      name: String,
-      link: String
-    }
+    prevName: String,
+    prevSlug: String,
+    nextName: String,
+    nextSlug: String
   },
   data() {
     return {

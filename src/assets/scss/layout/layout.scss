@@ -43,7 +43,6 @@
 
 .l-main__inner {
   width: calc(100% - 40px);
-  // height: 100%;
   margin-right: $padding-sp;
   margin-left: $padding-sp;
   background: #fff;
@@ -134,10 +133,6 @@
     margin-left: $padding-md;
   }
 
-  .l-main__wrapper {
-    height: calc(100vh - 120px);
-  }
-
   .l-main__header {
     height: 70px;
     line-height: 69px;
@@ -170,10 +165,7 @@
     transform-origin: top left;
 
     .site-title {
-      color: $color-sub;
       font-size: rem(14);
-      font-weight: 300;
-      letter-spacing: .08em;
     }
   }
 
@@ -192,14 +184,8 @@
     overflow: auto;
     width: $page-width-pc;
     max-width: $page-max-width;
-    height: 100vh;
+    min-height: 100vh;
   }
-
-  .l-main__wrapper {
-    height: 100vh;
-  }
-
-  .l-main__section {}
 
   .l-main__header {
     height: 100px;
@@ -215,7 +201,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     width: 30vw;
-    padding: 110px 60px 60px;
+    padding: 110px 60px 18px;
     transform: none;
 
     &::before {
