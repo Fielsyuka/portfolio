@@ -69,7 +69,8 @@ export default {
           date: '2018.09',
           time: '約30日間',
           description: 'Udemyで解説を見ながら制作したものです。Javascriptの基礎知識に加えて、DRYの意識と、UIとモデルを分けて設計・記述することを学びました。',
-          image: 'bugety.png'
+          image: 'bugety.png',
+          source: 'https://github.com/Fielsyuka/Bugety'
         },
         {
           name: 'サイト内検索',
