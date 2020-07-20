@@ -27,7 +27,6 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_mixin.scss";
 .works-item {
-  margin-top: 30px;
   margin-left: 46px;
 }
 .works-item + .works-item {
@@ -64,11 +63,19 @@ export default {
 .works-item__image {
   > img {
     display: block;
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
   }
 }
 .works-item__source {
   margin-top: 30px;
+}
+
+@include media-breakpoint-up-md {
+  .works-item__image {
+    > img {
+      width: 70%;
+    }
+  }
 }
 </style>

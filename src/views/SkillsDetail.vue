@@ -3,7 +3,11 @@
     <div class="l-main__section l-wrap">
       <page-heading :page-name="skill.name" :class="skill.shadowClass"></page-heading>
       <p class="page-subtitle">[ Works ]</p>
-      <p class="page-overview">{{ skill.overview }}</p>
+      <div class="page-overview">
+        <div class="page-overview__text">
+          <p>{{ skill.overview }}</p>
+        </div>
+      </div>
       <h3 class="page-heading01">制作実績</h3>
       <works-item v-for="experience in skill.experiences" :key="experience.name">
         <template v-slot:name>{{ experience.name }}</template>

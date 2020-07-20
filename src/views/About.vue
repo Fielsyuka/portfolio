@@ -6,14 +6,24 @@
     <div class="l-main__section l-wrap">
       <page-heading page-name="About me" class="shadow-about"></page-heading>
       <h3 class="page-subtitle">[ ゆか ]</h3>
-      <p class="page-overview">30歳未経験でWEB業界に入り、現在{{num}}年目になりました。その間に2回の出産を経ているので実務経験は{{actual}}年程度です。3人のやんちゃな男の子を育てています。</p>
-      <p class="page-overview">色々な業種のお仕事を経験してきましたが、私にはWEBのお仕事がピカイチです。</p>
+      <div class="page-overview clearfix">
+        <div class="page-overview__image"><img src="@/assets/images/me.jpg" alt="me"></div>
+        <div class="page-overview__text">
+          <p>30歳未経験でWEB業界に入り、現在{{num}}年目になりました。その間に2回の出産を経ているので実務経験は{{actual}}年程度です。3人のやんちゃな男の子を育てています。色々な業種のお仕事を経験してきましたが、私にはWEBのお仕事がピカイチです！</p>
+        </div>
+      </div>
       <h4 class="page-heading01">経歴</h4>
+      <ul class="page-list">
+        <li>Niagara College（カナダ）卒業。</li>
+        <li>JALグループ会社へ入社し、国際線グランドスタッフ（地上勤務職）を約2年経験。</li>
+        <li>地方公務員へ転職し、一般事務職を約7年経験。</li>
+        <li>30歳で公務員を退職しWEB業界へ。実務未経験でWEBデザイン会社のスタートアップメンバーとしてコーダーを務める｡1年半後、妊娠のため退社しフリーランス活動を始める。</li>
+      </ul>
     </div>
     <div class="l-main__footer l-wrap">
       <page-footer>
         <pagination :prev="prev" :next="next"></pagination>
-      </page-footer>      
+      </page-footer>
     </div>
   </section>
 </template>
