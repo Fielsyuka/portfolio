@@ -10,6 +10,14 @@
         <template v-slot:date>{{ experience.date }}</template>
         <template v-slot:time>{{ experience.time }}</template>
         <template v-slot:texts>{{ experience.description }}</template>
+        <template v-slot:image v-if="experience.image">
+          <h5 class="page-heading02">制作物イメージ</h5>
+          <img :src="require('@/assets/images/' + experience.image)" alt="制作物キャプチャ">
+        </template>
+        <template v-slot:source v-if="experience.source">
+          <h5 class="page-heading02">ソースコード</h5>
+          <a :href="experience.source" target=_blank>{{ experience.source }}</a> 
+        </template>
       </works-item>
     </div>
     <div class="l-main__footer l-wrap">

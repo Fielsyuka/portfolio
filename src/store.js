@@ -65,10 +65,11 @@ export default {
       overview: 'WEB制作の実務では主にjQueryやライブラリを使用しますが、Javascriptの理解を深めるために業務外でWEBアプリを制作してアウトプットをしています。',
       experiences: [
         {
-          name: '家計簿WEBアプリ',
+          name: 'Bugety[家計簿WEBアプリ]',
           date: '2018.09',
-          time: '約14日間',
-          description: '準備中'
+          time: '約30日間',
+          description: 'Udemyで解説を見ながら制作したものです。Javascriptの基礎知識に加えて、DRYの意識と、UIとモデルを分けて設計・記述することを学びました。',
+          image: 'bugety.png'
         },
         {
           name: 'サイト内検索',
@@ -84,13 +85,15 @@ export default {
       svgClass: 'is-vue',
       slug: 'vue',
       id: 4,
-      overview: '***',
+      overview: '2020年6月から学び始めました。実務経験はありませんが、練習で制作したものを掲載します。',
       experiences: [
         {
-          name: 'ショッピングリスト',
+          name: 'ショッピングリスト[WEBアプリ]',
           date: '2020.06',
           time: '約10日間',
-          description: ''
+          description: 'Vue.jsを学び始めて制作したTodoリストアプリです。家族で共有するために、Firebase Authenticationを使用してユーザー認証機能を実装し、データベースにはFirestoreを使用しました。',
+          image: 'shopping-list.png',
+          source: 'https://github.com/Fielsyuka/shopping-list'
         },
         {
           name: '当サイト Portfolio',

@@ -6,6 +6,8 @@
       <span><slot name="time"></slot></span>
     </p>
     <p class="works-item__texts"><slot name="texts"></slot></p>
+    <div class="works-item__image"><slot name="image"></slot></div>
+    <div class="works-item__source"><slot name="source"></slot></div>
   </div>
 </template>
 
@@ -29,7 +31,7 @@ export default {
   margin-left: 46px;
 }
 .works-item + .works-item {
-  margin-top: 34px;
+  margin-top: 40px;
 }
 
 .works-item__name {
@@ -58,5 +60,15 @@ export default {
   margin-top: 12px;
   line-height: 1.8;
   text-align: justify;
+}
+.works-item__image {
+  > img {
+    display: block;
+    width: 80%;
+    margin: 20px 0;
+  }
+}
+.works-item__source {
+  margin-top: 30px;
 }
 </style>
