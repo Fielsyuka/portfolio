@@ -7,7 +7,7 @@
       <top-catch></top-catch>
     </div>
     <div class="l-main__footer l-wrap">
-      <page-footer></page-footer>
+      <page-footer><p class="copyright">Copyright © Portfolio Yuka.K. All rights reserved.</p></page-footer>
     </div>
   </div>
 </template>
@@ -50,6 +50,13 @@ export default {
     flex-direction: column;
     justify-content: center;
   }
+}
+.copyright {
+  color: $color-sub;
+  font-size: rem(10);
+  letter-spacing: .05em;
+  text-align: center;
+  
 }
 
 </style>

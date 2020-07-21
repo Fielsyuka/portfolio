@@ -17,12 +17,12 @@
         <li>Niagara College（カナダ）卒業。</li>
         <li>JALグループ会社へ入社し、国際線グランドスタッフ（地上勤務職）を約2年経験。</li>
         <li>地方公務員へ転職し、一般事務職を約7年経験。</li>
-        <li>30歳で公務員を退職しWEB業界へ。実務未経験でWEBデザイン会社のスタートアップメンバーとしてコーダーを務める｡1年半後、妊娠のため退社しフリーランス活動を始める。</li>
+        <li>公務員を退職しWEB業界へ。実務未経験でWEBデザイン会社のスタートアップメンバーとしてコーダーを務める｡1年半後、妊娠のため退社しフリーランス活動を始める。</li>
       </ul>
     </div>
     <div class="l-main__footer l-wrap">
       <page-footer>
-        <pagination :prev="prev" :next="next"></pagination>
+        <pagination :prevSlug="prevSlug" :prevName="prevName"></pagination>
       </page-footer>
     </div>
   </section>
@@ -44,11 +44,8 @@ export default {
   },
   data() {
     return {
-      prev: {
-        name: "Top",
-        link: "/"
-      },
-      next: "none",
+      prevSlug: '/',
+      prevName: 'Top',
       start: 2017,
       num: '',
       actual: ''
