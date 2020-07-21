@@ -22,7 +22,12 @@
     </div>
     <div class="l-main__footer l-wrap">
       <page-footer>
-        <pagination :prevSlug="prevSlug" :prevName="prevName"></pagination>
+        <router-link :to="{ name: 'Top' }" class="pagination__prev">
+          <svg class="pagination__svg" width="40px" height="5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M30 4 L0 4 L10 0" stroke="#ccc" stroke-width="1" fill="none" stroke-linecap="square"></path>
+          </svg>
+          <p class="pagination__text">Top</p>
+        </router-link>
       </page-footer>
     </div>
   </section>
@@ -31,7 +36,6 @@
 import PageNav from '@/components/PageNav.vue'
 import PageHeading from '@/components/PageHeading.vue'
 import PageFooter from '@/components/PageFooter.vue'
-import Pagination from '@/components/Pagination.vue'
 
 
 export default {
@@ -40,12 +44,9 @@ export default {
     PageNav,
     PageHeading,
     PageFooter,
-    Pagination,
   },
   data() {
     return {
-      prevSlug: '/',
-      prevName: 'Top',
       start: 2017,
       num: '',
       actual: ''
@@ -67,6 +68,4 @@ export default {
 <style lang="scss">
 @import "../assets/scss/_mixin.scss";
 
-//who
-.section-who {}
 </style>

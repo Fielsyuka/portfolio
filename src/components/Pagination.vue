@@ -44,15 +44,15 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../assets/scss/_mixin.scss";
 
 .pagination {
   display: flex;
   justify-content: space-between;
-
-  .pagination__prev,
-  .pagination__next {
+}
+.pagination__prev,
+.pagination__next {
     display: flex;
     align-items: center;
     .pagination__text {
@@ -66,12 +66,5 @@ export default {
       animation: line-draw 2.2s linear 1s infinite  forwards;
     }
   }
-}
 
-
-
-@include media-pc {
-  .pagination {
-  }
-}
 </style>
