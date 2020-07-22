@@ -76,7 +76,9 @@ export default {
           name: 'サイト内検索',
           date: '2020.04',
           time: '約3日間',
-          description: '医療従事者向け書籍をWEBページ化するコーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。'
+          description: '医療従事者向け書籍をWEBページ化するコーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。',
+          image: 'search-js.png',
+          source: 'https://github.com/Fielsyuka/Bugety'
         }
       ]
     },
@@ -98,9 +100,10 @@ export default {
         },
         {
           name: '当サイト Portfolio',
-          date: '**',
-          time: '**',
-          description: '**'
+          date: '2020.07',
+          time: '制作中',
+          description: 'コンポーネントとルーターの練習で制作しました。スキルと実績はstore.jsで保管し、routerのパラメーターを利用してスキルのページごとに情報を取得できるようにしました。',
+          source: 'https://github.com/Fielsyuka/portfolio'
         }
       ]
     },
