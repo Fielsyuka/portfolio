@@ -13,7 +13,11 @@
         <template v-slot:name>{{ experience.name }}</template>
         <template v-slot:date>{{ experience.date }}</template>
         <template v-slot:time>{{ experience.time }}</template>
-        <template v-slot:texts>{{ experience.description }}</template>
+        <template v-slot:texts v-if="experience.description">{{ experience.description }}</template>
+        <template v-slot:url v-if="experience.url">
+          <h5 class="page-heading02">URL</h5>
+          <a :href="experience.url" target=_blank>{{ experience.url }}</a> 
+        </template>
         <template v-slot:image v-if="experience.image">
           <h5 class="page-heading02">制作物イメージ</h5>
           <img :src="require('@/assets/images/' + experience.image)" alt="制作物キャプチャ">

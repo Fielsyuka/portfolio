@@ -6,6 +6,7 @@
       <span><slot name="time"></slot></span>
     </p>
     <p class="works-item__texts"><slot name="texts"></slot></p>
+    <div class="works-item__url"><slot name="url"></slot></div>
     <div class="works-item__image"><slot name="image"></slot></div>
     <div class="works-item__source"><slot name="source"></slot></div>
   </div>
