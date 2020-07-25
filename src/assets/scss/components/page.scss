@@ -106,7 +106,7 @@
   .page-overview__image {
     margin-right: 30px;
   }
-  .page-overview__text {
-  width: calc(100% - 150px);
-}
+  .page-overview__image + .page-overview__text {
+    width: calc(100% - 150px);
+  }
 }

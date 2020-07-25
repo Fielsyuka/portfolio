@@ -49,6 +49,20 @@ export default {
           time: '約45日間',
           description: '規定のCSSテンプレートを組み合わせる形でのコーディング案件です。図表を除くテキスト部分のみ担当しました。ページ数、文章量がとても多いのでミスが無いよう慎重に作業し、念入りに確認を行いました。',
           url: 'https://medical.kyowakirin.co.jp/hematonco/romiplate/'
+        },
+        {
+          name: '就職エージェントWEBサービス',
+          date: '2019.07',
+          time: '約5日間',
+          description: '',
+          url: 'https://demotest.fiels-web.com/agent/'
+        },
+        {
+          name: '医療従事者向け書籍のWEBサービス化',
+          date: '2019.08',
+          time: '約14日間',
+          description: '',
+          url: 'https://demotest.fiels-web.com/atlas/'
         }
       ]
     },
