@@ -12,7 +12,7 @@ export default {
           name: '美容事業コーポレートサイト',
           date: '2018.06',
           time: '約7日間',
-          description: '縦長1ページのコーポレートサイトです。お問い合わせフォームはWordpressのContact Form 7で実装し、その他は静的コーディングです。'
+          description: '縦長1ページのコーポレートサイトです。お問い合わせフォームはWordpressのContact Form 7で実装し、その他は静的コーディングです。',
           url: 'http://prosperity-tokyo.co.jp/'
         },
         {
