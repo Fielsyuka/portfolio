@@ -77,8 +77,8 @@ export default {
         {
           name: '行政書士事務所ホームページ',
           date: '2017.09~10',
-          time: '約60日間',
-          description: '',
+          time: '約40日間',
+          description: 'トップページのコーディング、お知らせの投稿、各固定ページテンプレート、お問い合わせフォームの作成を担当しました。',
           url: 'http://www.gg441.tokyo/'
         },
         {
@@ -123,7 +123,8 @@ export default {
           name: 'サイト内検索',
           date: '2020.04',
           time: '約3日間',
-          description: '医療従事者向け書籍をWEBページ化するコーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。',
+          description: '過去の静的コーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。',
+          url: 'https://optimistic-clarke-0e631c.netlify.app/',
           image: 'search-js.png',
           source: 'https://github.com/Fielsyuka/search-js'
         }
