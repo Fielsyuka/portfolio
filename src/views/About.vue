@@ -19,6 +19,14 @@
         <li>地方公務員へ転職し、一般事務職を約5年経験。</li>
         <li>公務員を退職しWEB業界へ。実務未経験でWEBデザイン会社のスタートアップメンバーとしてコーダーを務める｡1年半後、妊娠のため退社しフリーランス活動を始める。</li>
       </ul>
+       <h4 class="page-heading01">リンク</h4>
+       <h5 class="page-heading02">ブログ</h5>
+       <a href="https://fiels-web.com" target="_blank">anchoko.</a>
+       <h5 class="page-heading02">SNS</h5>
+       <ul class="page-list">
+         <li><a href="https://twitter.com/Fiels19" target="_blank">Twitter</a></li>
+         <li><a href="https://twitter.com/Fiels19" target="_blank">Instagram</a></li>
+       </ul>
     </div>
     <div class="l-main__footer l-wrap">
       <page-footer>
