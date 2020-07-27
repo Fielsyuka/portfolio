@@ -23,6 +23,7 @@ img {
 a {
   color: $color-link;
   text-decoration: none;
+  word-break: break-all;
   transition: filter .3s;
   transition: opacity .5s;
 }
