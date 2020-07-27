@@ -34,7 +34,7 @@ export default {
           date: '2019.05',
           time: '約2日間',
           description: 'CSS設計を考えるきっかけとなった実績の一つです。4Pの小規模なプロダクトサイトですが、ユーティリティ・基本レイアウト・共通部品のクラスを整理してからコーディングすることで、見やすく拡張性のあるコードを心掛けました。納品後には「スピーディーで綺麗なコーディングでした」と高評価をいただきました。',
-          URL: 'http://www.kissei-gallery.com/gr/od/'
+          url: 'http://www.kissei-gallery.com/gr/od/'
         },
         {
           name: 'M&Aサービス企業コーポレートサイト',
