@@ -63,8 +63,25 @@ export default {
     .pagination__svg path {
       stroke: $color-line;
       stroke-dasharray: 100px;
-      animation: line-draw 2.2s linear 1s infinite  forwards;
+      stroke-dashoffset: 100px;
+      // animation: name duration timing-function delay iteration-count direction fill-mode;
+      animation: line-draw 2.4s linear 0s infinite normal forwards;
     }
   }
 
+//line
+@keyframes line-draw {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 </style>

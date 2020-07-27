@@ -50,20 +50,3 @@
     transform: translateY(0);
   }
 }
-
-//line
-
-@keyframes line-draw {
-  0% {
-    stroke-dashoffset: 100px;
-  }
-  25% {
-    stroke-dashoffset: 0;
-  }
-  75% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: -100px;
-  }
-}
