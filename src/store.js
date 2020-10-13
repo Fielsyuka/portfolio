@@ -55,14 +55,14 @@ export default {
           date: '2019.07',
           time: '約5日間',
           description: '',
-          url: 'https://demotest.fiels-web.com/agent/'
+          // url: 'https://demotest.fiels-web.com/agent/'
         },
         {
           name: '医療従事者向け書籍のWEBサービス化',
           date: '2019.08',
           time: '約14日間',
           description: '',
-          url: 'https://demotest.fiels-web.com/atlas/'
+          // url: 'https://demotest.fiels-web.com/atlas/'
         }
       ]
     },
