@@ -134,7 +134,7 @@ export default {
           date: "2020.04",
           time: "約3日間",
           description: "過去の静的コーディングのお仕事の中で実装したものを改めて見直し、機能を追加したものです。",
-          url: "https://optimistic-clarke-0e631c.netlify.app/",
+          // url: "https://optimistic-clarke-0e631c.netlify.app/",
           // image: 'search-js.png',
           source: "https://github.com/Fielsyuka/search-js",
         },
