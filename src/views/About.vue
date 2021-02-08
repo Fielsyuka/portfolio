@@ -9,7 +9,7 @@
       <div class="page-overview clearfix">
         <div class="page-overview__image"><img src="@/assets/images/me.jpg" alt="me"></div>
         <div class="page-overview__text">
-          <p>30歳未経験でWEB業界に入り、現在{{num}}年目になりました。その間に2回の出産を経ているので実務経験は{{actual}}年程度です。3人のやんちゃな男の子を育てています。色々な業種のお仕事を経験してきましたが、私にはWEBのお仕事がピカイチです！</p>
+          <p>30歳でWEB業界に入り、現在フリーランス{{num}}年目になりました。3人のやんちゃな男の子を育てています。色々な業種のお仕事を経験してきましたが、私にはWEBのお仕事がピカイチです！</p>
         </div>
       </div>
       <h4 class="page-heading01">経歴</h4>
@@ -60,8 +60,8 @@ export default {
   mounted() {
     const date = new Date();
     const year = date.getFullYear();
-    this.num = year - this.start;
-    this.actual = this.num - 1;
+    this.num = year - this.start + 1;
+    // this.actual = this.num - 1;
   },
   methods: {
     splitText(val) {
